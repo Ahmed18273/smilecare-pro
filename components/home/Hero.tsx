@@ -6,9 +6,11 @@ import { siteConfig } from "@/data/site";
 export default function Hero() {
   return (
     <section id="home" className="relative overflow-hidden bg-gradient-to-b from-sky-50 via-white to-white">
+      <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-blue-100 blur-3xl opacity-50"></div>
+      <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-cyan-100 blur-3xl opacity-50"></div>
       <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-blue-200/30 blur-3xl" />
         <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-sky-200/30 blur-3xl" />
-        <div className="mx-auto grid min-h-[90vh] max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-2">
+        <div className="mx-auto grid min-h-[90vh] max-w-7xl items-center gap-12 px-6 py-25 lg:grid-cols-2">
 
         <div>
           <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
