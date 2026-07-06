@@ -5,7 +5,7 @@ import { siteConfig } from "@/data/site";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-sky-50 via-white to-white">
+    <section id="home" className="relative overflow-hidden bg-gradient-to-b from-sky-50 via-white to-white">
       <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-blue-200/30 blur-3xl" />
         <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-sky-200/30 blur-3xl" />
         <div className="mx-auto grid min-h-[90vh] max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-2">
@@ -31,12 +31,12 @@ export default function Hero() {
           <div className="mt-10 flex flex-wrap gap-4">
             <Button size="lg">
               <CalendarDays className="mr-2 h-5 w-5" />
-              Book Appointment
+              {siteConfig.appointmentText}
             </Button>
 
             <Button size="lg" variant="outline">
               <Phone className="mr-2 h-5 w-5" />
-              Call Now
+              {siteConfig.phone}
             </Button>
           </div>
 
@@ -59,18 +59,22 @@ export default function Hero() {
         </div>
         <div className="flex justify-center">
             <div className="relative h-[550px] w-[430px] overflow-hidden rounded-[40px] border border-white/40 bg-white p-3 shadow-[0_25px_80px_rgba(0,0,0,0.15)]">
-                <Image
-                 src="/images/dentist.jpg"
-                 alt="Dentist"
-                 fill
-                 priority
-                 className="object-cover"
-                />
+              <Image
+                src="/images/dentist.jpg"
+                alt="Dentist"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 430px"
+                className="object-cover"
+              />
+                <div className="absolute bottom-6 left-6 rounded-2xl bg-white/90 p-4 shadow-xl backdrop-blur">
+                  <p className="text-sm text-slate-500">Trusted Rating</p>
+                    <h3 className="text-2xl font-bold text-slate-900">
+                      ⭐ 4.9/5
+                    </h3>
+                </div>  
             </div>
         </div>
-
-
-
       </div>
     </section>
   );
