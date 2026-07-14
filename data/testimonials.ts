@@ -3,7 +3,7 @@ export const testimonials = [
     name: "Emily Carter",
     treatment: "Dental Implant",
     review:
-      "The entire experience was outstanding. The staff was friendly, the clinic was modern, and my smile has never looked better.",
+      "The entire experience was outstanding. The staff was friendly and my smile has never looked better.",
   },
   {
     name: "Michael Brown",

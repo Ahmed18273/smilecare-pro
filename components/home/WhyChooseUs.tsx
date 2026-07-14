@@ -2,14 +2,16 @@ import { features } from "@/data/features";
 
 export default function WhyChooseUs() {
   return (
-    <section id="about" className="bg-slate-50 py-24">
+    <section id="about" className="scroll-mt-24 bg-slate-50 py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <span className="font-semibold uppercase tracking-widest text-blue-600">
             Why Choose Us
           </span>
 
-          <h2 className="mt-4 text-4xl font-bold text-slate-900">
+          <h2 className="mt-4 text-3xl
+sm:text-4xl
+lg:text-5xl">
             Exceptional Care, Every Visit
           </h2>
 

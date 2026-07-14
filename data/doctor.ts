@@ -3,7 +3,6 @@ export const doctor = {
   degree: "DDS, Cosmetic & Family Dentist",
   experience: "18+ Years of Experience",
   bio: "Dedicated to providing comfortable, modern, and personalized dental care. Dr. Sarah Johnson has helped thousands of patients achieve healthy and confident smiles through preventive, restorative, and cosmetic dentistry.",
-  image: "/images/doctor/doctor.jpg",
 
   achievements: [
     "10,000+ Happy Patients",

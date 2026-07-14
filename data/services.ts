@@ -39,3 +39,4 @@ export const services = [
     icon: Syringe,
   },
 ];
+export const serviceNames = services.map((service) => service.title);

@@ -3,15 +3,17 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-white">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="services" data-aos="fade-up" className="scroll-mt-24 py-10 bg-white">
+      <div className="mx-auto max-w-7xl px-8">
 
         <div className="text-center">
           <span className="text-blue-600 font-semibold uppercase tracking-widest">
             Our Services
           </span>
 
-          <h2 className="mt-4 text-4xl font-bold text-slate-900">
+          <h2 className="mt-4 text-3xl
+sm:text-4xl
+lg:text-5xl">
             Complete Dental Care
           </h2>
 

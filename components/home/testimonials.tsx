@@ -3,7 +3,7 @@ import { testimonials } from "@/data/testimonials";
 
 export default function Testimonials() {
   return (
-    <section className="bg-slate-50 py-24">
+    <section className="scroll-mt-24 bg-slate-50 py-18 ">
       <div className="mx-auto max-w-7xl px-6">
         <FadeIn>
           <div className="text-center">
@@ -11,13 +11,17 @@ export default function Testimonials() {
               Testimonials
             </span>
 
-            <h2 className="mt-4 text-4xl font-bold text-slate-900">
+            <h2 className="mt-4 text-3xl
+sm:text-4xl
+lg:text-5xl">
               What Our Patients Say
             </h2>
           </div>
         </FadeIn>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-16 grid gap-8 md:grid-cols-1
+md:grid-cols-2
+lg:grid-cols-3">
           {testimonials.map((item, index) => (
             <FadeIn key={item.name} delay={index * 0.15}>
               <div className="rounded-3xl bg-white p-8 shadow-lg">
