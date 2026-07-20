@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "SmileCare Pro",
+    default: "Dr. Javed's Dental Surgery",
     template: "%s | SmileCare Pro",
   },
 
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),
 
   openGraph: {
-    title: "SmileCare Pro",
+    title: "Dr. Javed's Dental Surgery",
     description:
       "Modern dental care with experienced professionals.",
 
     url: "http://localhost:3000",
 
-    siteName: "SmileCare Pro",
+    siteName: "Dr. Javed's Dental Surgery",
 
     locale: "en_US",
 
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "SmileCare Pro",
+    title: "Dr. Javed's Dental Surgery",
     description:
-      "Professional Dental Care",
+      "Modern dental care with experienced professionals",
 
     images: ["/hero.jpg"],
   },

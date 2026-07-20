@@ -1,6 +1,5 @@
 export const siteConfig = {
-  clinicName: "SmileCare Pro",
-
+  clinicName: "Dr. Javed's Dental Surgery",
   tagline: "Your Smile. Our Priority.",
 
   description:
@@ -9,7 +8,7 @@ export const siteConfig = {
   phone: "042 35110668",
   whatsapp: "+92 333 4211705",
 
-  email: "hello@smilecarepro.com",
+  email: "javed@dental.com",
 
   address: "574 A1 Johar Town (Near Aslam Chowk College Road) Lahore",
 
@@ -21,8 +20,11 @@ export const siteConfig = {
   appointmentText: "Book Appointment",
 
   emergency: true,
-  googleMapsEmbed:
-  "https://maps.app.goo.gl/nQsVaax35pTCELbd6",
+ googleMapsEmbed:
+  "https://www.google.com/maps?q=574-A1,+College+Road,+Johar+Town,+Lahore&z=17&output=embed",
+
+googleMapsLink:
+  "https://maps.google.com/?q=574-A1,+College+Road,+Johar+Town,+Lahore",
 
   social: {
     facebook: "#",

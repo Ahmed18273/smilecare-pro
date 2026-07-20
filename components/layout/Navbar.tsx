@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-slate-200/40 bg-white/70 backdrop-blur-md transition-all">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-        <Link href="/" className="text-2xl font-bold text-blue-600">
+        <Link href="/" className="max-w-[180px] text-2xl font-bold text-blue-700">
           {siteConfig.clinicName}
         </Link>
 

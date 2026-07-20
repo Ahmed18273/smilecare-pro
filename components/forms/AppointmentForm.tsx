@@ -5,6 +5,19 @@ import { useForm } from "react-hook-form";
 import { serviceNames } from "@/data/services";
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
+const appointmentTimes = [
+  "5:00 PM",
+  "5:30 PM",
+  "6:00 PM",
+  "6:30 PM",
+  "7:00 PM",
+  "7:30 PM",
+  "8:00 PM",
+  "8:30 PM",
+  "9:00 PM",
+  "9:30 PM",
+  "10:00 PM",
+];
 const appointmentSchema = z.object({
   name: z.string().min(2, "Please enter your full name"),
 
@@ -185,18 +198,35 @@ return (
 
                 
                 </select>
+                <div className="space-y-2">
+  <label className="text-sm font-medium text-slate-700">
+    Preferred Time
+  </label>
 
-                <input
-                    {...register("time")}
-                    type="time"
-                    className="rounded-xl border p-4"
-                />
+  <select
+    {...register("time")}
+    defaultValue=""
+    className="h-14 w-full rounded-xl border border-slate-300 bg-white px-4 text-slate-700 shadow-sm transition focus:border-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-100"
+  >
+    <option value="" disabled>
+      Select Appointment Time
+    </option>
+
+    {appointmentTimes.map((time) => (
+      <option key={time} value={time}>
+        {time}
+      </option>
+    ))}
+  </select>
+
+  {errors.time && (
+    <p className="text-sm text-red-500">
+      {errors.time.message}
+    </p>
+  )}
+</div>
+
                 
-                {errors.time && (
-  <p className="text-sm text-red-500">
-    {errors.time.message}
-  </p>
-)}
 
 
                 <textarea

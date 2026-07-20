@@ -118,13 +118,15 @@ export default function Contact() {
           <div className="overflow-hidden rounded-3xl shadow-xl">
 
             <iframe
-              src={siteConfig.googleMapsEmbed}
-              className="h-full min-h-[520px] w-full"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-
+                src={siteConfig.googleMapsEmbed}
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Clinic Location"
+              />
           </div>
 
         </div>
@@ -132,13 +134,11 @@ export default function Contact() {
         <div className="mt-12 text-center">
 
           <a
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-              siteConfig.address
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700"
-          >
+  href={siteConfig.googleMapsLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700"
+>
             <Navigation className="h-5 w-5" />
             Get Directions
           </a>
