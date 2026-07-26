@@ -7,8 +7,35 @@ import { siteConfig } from "@/data/site";
 
 
 export default function Navbar() {
+  const [showNavbar, setShowNavbar] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  useEffect(() => {
+  let lastScrollY = window.scrollY;
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    // Always show at the top
+    if (currentScrollY < 20) {
+      setShowNavbar(true);
+    }
+    // Hide when scrolling down
+    else if (currentScrollY > lastScrollY) {
+      setShowNavbar(false);
+    }
+    // Show when scrolling up
+    else {
+      setShowNavbar(true);
+    }
+
+    lastScrollY = currentScrollY;
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
   useEffect(() => {
   const sections = document.querySelectorAll("section[id]");
 
@@ -30,7 +57,15 @@ export default function Navbar() {
   return () => observer.disconnect();
 }, []);
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-slate-200/40 bg-white/70 backdrop-blur-md transition-all">
+    <header
+  className={`fixed left-0 right-0 z-50 transition-transform duration-300
+    ${
+      showNavbar
+        ? "translate-y-0"
+        : "-translate-y-full"
+    }
+    border-b border-slate-200/40 bg-white/70 backdrop-blur-md`}
+>
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         <Link href="/" className="max-w-[180px] text-2xl font-bold text-blue-700">
           {siteConfig.clinicName}
@@ -105,6 +140,7 @@ export default function Navbar() {
   onClick={() => setMenuOpen(!menuOpen)}
   className="md:hidden"
 >
+  
   {menuOpen ? (
     <X className="h-7 w-7" />
   ) : (
