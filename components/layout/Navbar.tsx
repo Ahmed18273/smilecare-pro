@@ -67,7 +67,7 @@ export default function Navbar() {
     border-b border-slate-200/40 bg-white/70 backdrop-blur-md`}
 >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-        <Link href="/" className="max-w-[180px] text-2xl font-bold text-blue-700">
+        <Link href="/" className="max-w-[220px] text-2xl font-bold text-blue-700">
           {siteConfig.clinicName}
         </Link>
 
