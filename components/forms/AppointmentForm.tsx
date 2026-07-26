@@ -167,7 +167,7 @@ return (
   {...register("date")}
   type="date"
   min={new Date().toISOString().split("T")[0]}
-  className="rounded-xl border p-4"
+  className="h-14 w-full rounded-xl border border-slate-300 bg-white px-4"
   disabled={isSubmitting}
 />
 
