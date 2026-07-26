@@ -35,12 +35,24 @@ lg:text-5xl">
             {doctor.name}
           </h2>
 
-          <p className="mt-2 text-lg text-blue-600">
-            {doctor.degree}
+         <p className="mt-2 text-base leading-relaxed text-blue-600 sm:text-lg">
+            {doctor.degree1} 
+            <br/>
+            {doctor.degree2}
+            <br/>
+            {doctor.degree3}
+            <br/>
+            {doctor.degree4}
+            <br/>
+            {doctor.degree5}
+            
+
+
           </p>
 
           <p className="mt-1 text-base
 md:text-lg8">
+  <br/>
             {doctor.bio}
           </p>
 

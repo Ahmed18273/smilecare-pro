@@ -149,8 +149,16 @@ export default function Navbar() {
 </button>
       </div>
       {menuOpen && (
-  <div className="border-t bg-white md:hidden">
-    <nav className="flex flex-col px-6 py-4">
+  <div
+  className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden
+    ${
+      menuOpen
+        ? "max-h-96 opacity-100 border-t"
+        : "max-h-0 opacity-0"
+    }
+    bg-white`}
+>
+   <nav className="flex flex-col px-6 py-4">
 
       <a
         href="#home"
