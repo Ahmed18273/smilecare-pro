@@ -114,7 +114,7 @@ return (
           </p>
         </div>
 
-        <div className="mt-12 rounded-3xl bg-white p-8 shadow-xl">
+        <div className="mt-12 rounded-3xl bg-white p-8 shadow-xl w-full">
 
           <form
   onSubmit={handleSubmit(onSubmit)}
@@ -162,7 +162,7 @@ return (
     {errors.phone.message}
   </p>
 )}
-
+<div className="w-full">
                 <input
   {...register("date")}
   type="date"
@@ -177,7 +177,7 @@ return (
   </p>
   
 )}
-
+</div>
                 <select
   {...register("service")}
   className="rounded-xl border p-4"
